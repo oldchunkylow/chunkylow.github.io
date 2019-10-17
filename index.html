@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Game of Miju</title>
+    <meta name="author" content="Your Name">
+    <meta name="description" content="Example description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <!--- Jquery UI --->
+    <link rel="stylesheet" href="styles/jquery-ui.min.css">
+    <script src="scripts/jquery-ui.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Quicksand|Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <header></header>
+    <main class="container-fluid game-area mt-5">
+        <div class="intro-screen"><img class="logo" src="images/ui/logo.png">
+            <div class="play-button button">Play Now</div>
+            <div class="wave-bottom-one"></div>
+            <div class="wave-bottom-two"></div>
+            <div class="wave-bottom-three"></div>
+        </div>
+        <div class="battle-scene row">
+
+        </div>
+        <div class="wave-left wave-side-left"></div>
+        <div class="wave-left  wave-side-left-second"></div>
+        <div class="wave-left  wave-side-left-third"></div>
+
+        <div class="wave-right  wave-side-right"></div>
+        <div class="wave-right wave-side-right-second"></div>
+        <div class="wave-right wave-side-right-third"></div>
+
+
+    </main>
+    <footer><audio class="bg-sound" id="bg-sound" src="sound/opening-theme.mp3" autoplay loop="loop">
+        </audio>
+        <audio class="enemy-effects" id="enemy-effects" src="sound/smack.mp3">
+        </audio>
+    </footer>
+    <script type="text/javascript" src="scripts/main.js"></script>
+</body></html>

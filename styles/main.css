@@ -1,0 +1,770 @@
+/* Fonts */
+
+/*
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Righteous', cursive;
+*/
+
+body {
+    background: rgba(44, 18, 81);
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+.intro-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../images/ui/sunsetbg.png);
+    background-size: cover;
+    background-position: bottom;
+    z-index: 10001;
+}
+
+.logo {
+    position: absolute;
+    top: 10vw;
+    left: 25%;
+    width: 50%;
+    transform-origin: center;
+    animation: logo-animation 3s ease-in-out 0s infinite;
+}
+
+.play-button {
+    position: absolute;
+    top: 30vw;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 2vw;
+    padding: 1vw 3vw;
+    box-sizing: border-box;
+    border-radius: 1vw;
+    background: rgb(255, 191, 0);
+    box-shadow: 0.5vw 0.5vw 0px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+
+}
+
+.wave-bottom-one {
+    background: url(../images/ui/wave-bottom.png);
+    background-repeat: repeat-x;
+    background-size: 60vw;
+    position: absolute;
+    left: 0;
+    top: 90%;
+    height: 25%;
+    width: 100%;
+    animation: wave-bottom-animation 3s linear 0s infinite;
+    opacity: 0.3;
+}
+
+.wave-bottom-two {
+    background: url(../images/ui/wave-bottom.png);
+    background-repeat: repeat-x;
+    background-size: 60vw;
+    position: absolute;
+    left: 0;
+    top: 93%;
+    height: 25%;
+    width: 100%;
+    animation: wave-bottom-animation 5s linear 0s infinite;
+    opacity: 0.5;
+}
+
+.wave-bottom-three {
+    background: url(../images/ui/wave-bottom.png);
+    background-repeat: repeat-x;
+    background-size: 60vw;
+    position: absolute;
+    left: 0;
+    top: 97%;
+    height: 25%;
+    width: 100%;
+    animation: wave-bottom-animation 7s linear 0s infinite;
+    opacity: 0.5;
+    filter: hue-rotate(20deg) brightness(80%);
+}
+
+.game-area {
+    background: rgb(255, 191, 0);
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+    height: 90vh;
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.5);
+}
+
+.wave-side-left {
+    background: url(../images/ui/wave.png);
+    background-repeat: repeat-y;
+    background-size: 11vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 15%;
+    animation: wave-left-animation 3s linear 0s infinite;
+    opacity: 0.3;
+}
+
+.wave-side-left-second {
+    background: url(../images/ui/wave.png);
+    background-repeat: repeat-y;
+    background-size: 11vw;
+    position: absolute;
+    left: -2vw;
+    top: 0;
+    height: 100%;
+    width: 15%;
+    animation: wave-left-animation 4s linear 0s infinite;
+}
+
+.wave-side-left-third {
+    background: url(../images/ui/wave.png);
+    background-repeat: repeat-y;
+    background-size: 11vw;
+    position: absolute;
+    left: -6vw;
+    top: 0;
+    height: 100%;
+    width: 15%;
+    animation: wave-left-animation 7s linear 0s infinite;
+    filter: hue-rotate(20deg) brightness(80%);
+}
+
+.wave-side-right {
+    background: url(../images/ui/wave.png);
+    background-repeat: repeat-y;
+    background-size: 11vw;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 15%;
+    animation: wave-right-animation 3s linear 0s infinite;
+    opacity: 0.3;
+}
+
+.wave-side-right-second {
+    background: url(../images/ui/wave.png);
+    background-repeat: repeat-y;
+    background-size: 11vw;
+    position: absolute;
+    right: -2vw;
+    top: 0;
+    height: 100%;
+    width: 15%;
+    animation: wave-right-animation 4s linear 0s infinite;
+}
+
+.wave-side-right-third {
+    background: url(../images/ui/wave.png);
+    background-repeat: repeat-y;
+    background-size: 11vw;
+    position: absolute;
+    right: -6vw;
+    top: 0;
+    height: 100%;
+    width: 15%;
+    animation: wave-right-animation 7s linear 0s infinite;
+    filter: hue-rotate(20deg) brightness(80%);
+}
+
+.battle-scene {
+    background: rgb(255, 191, 0);
+    position: relative;
+    height: 80%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.player-frame,
+.enemy-frame {
+    position: relative;
+
+}
+
+.enemy-frame img {
+    transform: scaleX(-1);
+    animation: enemy-rest-animation 3s linear 0s infinite;
+}
+
+.player-frame img {
+    animation: rest-animation 3s linear 0s infinite;
+}
+
+.player-frame img,
+.enemy-frame img {
+    transform-origin: bottom;
+    transition: 0.5s;
+    margin: 0 auto;
+}
+
+/* Player Bars*/
+.hp-bar-container {
+    background: red;
+    border-radius: 10px;
+    margin: 1vw auto 0 auto;
+}
+
+.hp-bar {
+    background: green;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.turn-bar-container {
+    height: 0.6em;
+    background: grey;
+    border-radius: 10px;
+    margin: 0 auto 0 auto;
+}
+
+.turn-bar {
+    height: 0.6em;
+    background: yellow;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+/* Damage Text */
+.damage-text {
+    color: red;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 2em;
+    animation: damage-animation 0.5s ease 0s 1;
+    z-index: 2000;
+}
+
+/* Lose Text */
+.lose-text {
+    font-size: 5em;
+    color: red;
+    margin-top: 30%;
+    animation: glowing-text-animation 1s ease-in-out infinite alternate;
+}
+
+.win-lose-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.win-text {
+    font-size: 5em;
+    color: rgb(255, 191, 0);
+    text-align: center animation: glowing-text-animation 1s ease-in-out infinite alternate;
+}
+
+.bonus-score {
+    color: white;
+    padding-bottom: 2vw;
+}
+
+.overlay-text {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 3000;
+    top: 0;
+    left: 0;
+}
+
+/* Attack Icons */
+
+.attack-list {
+    position: absolute;
+    right: 0;
+    display: none;
+    z-index: 2000;
+}
+
+.attack-icon {
+    background: red;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    list-style: none;
+    transition: 0.5s;
+}
+
+/* Button */
+.overlay-minigame {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 3000;
+    top: 0;
+    right: 0;
+}
+
+.overlay-transition {
+    position: absolute;
+    background: rgba(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 4000;
+}
+
+.mini-game-circle {
+    position: absolute;
+    border: 1vw solid white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mini-game-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    color: white;
+    border: 1vw solid white;
+    border-radius: 50%;
+    transition: 0.2s;
+    /*
+    animation: move-animation 1s linear 1s infinite;*/
+    overflow: hidden;
+}
+
+.mini-game-button-fill-yellow {
+    content: "";
+    position: absolute;
+    background: gold;
+    width: 100%;
+    height: 0%;
+    bottom: 0%;
+    left: 0%;
+    transition: 0.3s;
+}
+
+.mini-game-button-fill-green {
+    content: "";
+    position: absolute;
+    background: green;
+    width: 100%;
+    height: 0%;
+    bottom: 0%;
+    left: 0%;
+}
+
+.end-game-button {
+    background: white;
+    padding: 0.5vw 3vw;
+    border-radius: 0.5vw;
+    cursor: pointer;
+}
+
+.player-field {
+    background: rgb(255, 191, 0);
+    padding: 2vw;
+}
+
+.click-target {
+    transform-origin: center;
+}
+
+.overworld-player {}
+
+.health-container-all {
+    background: black;
+    z-index: 5000;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+}
+
+.health-container {
+    padding: 1vw 0 1vw 0;
+    position: relative;
+}
+
+.ui-health-image {
+    position: absolute;
+    left: 0;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ui-health-image img {
+    width: 6vw;
+    margin: 0 auto;
+}
+
+.ui-health-text {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.ui-hp-bar-container {
+    background: red;
+    border-radius: 10px;
+}
+
+.ui-hp-bar {
+    background: green;
+    border-radius: 10px;
+    transition: 0.5s;
+    text-align: center;
+}
+
+.collision-object {
+    filter: saturate(0);
+}
+
+.score-number {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Animations */
+
+@keyframes rest-animation {
+    0% {
+        transform: scaleY(1.0);
+    }
+
+    50% {
+        transform: scaleY(1.05);
+    }
+
+    100% {
+        transform: scaleY(1.0);
+    }
+}
+
+@keyframes enemy-overworld-animation {
+    0% {
+        transform: scaleY(1.0);
+    }
+
+    50% {
+        transform: scaleY(1.2);
+    }
+
+    100% {
+        transform: scaleY(1.0);
+    }
+}
+
+@keyframes enemy-rest-animation {
+    0% {
+        transform: scaleY(1.0) scaleX(-1);
+    }
+
+    50% {
+        transform: scaleY(1.05) scaleX(-1);
+    }
+
+    100% {
+        transform: scaleY(1.0) scaleX(-1);
+    }
+}
+
+@keyframes move-animation {
+    0% {
+        top: 0%;
+    }
+
+
+
+    100% {
+        top: 50%;
+    }
+}
+
+@keyframes expand-animation {
+    0% {
+        background: rgba(173, 0, 0);
+        border: 15px solid rgba(43, 0, 0);
+    }
+
+    50% {
+        background: rgba(107, 0, 0);
+        border: 5px solid rgba(43, 0, 0);
+    }
+
+    100% {
+        background: rgba(173, 0, 0);
+        border: 15px solid rgba(18, 0, 0);
+    }
+}
+
+@keyframes damage-animation {
+    0% {
+        transform: translate(-50%, 70%);
+    }
+
+    100% {
+        transform: translate(-50%, 0%);
+    }
+}
+
+@keyframes glowing-animation {
+    0% {
+        filter: brightness(0.75);
+    }
+
+    50% {
+        filter: brightness(1.5);
+    }
+
+    100% {
+        filter: brightness(0.75);
+    }
+}
+
+@keyframes enemy-glowing-animation {
+    0% {
+        filter: brightness(0.75);
+        transform: scaleX(-1);
+    }
+
+    50% {
+        filter: brightness(1.5);
+        transform: scaleX(-1);
+
+    }
+
+    100% {
+        filter: brightness(0.75);
+        transform: scaleX(-1);
+
+    }
+}
+
+@keyframes glowing-text-animation {
+    from {
+        filter: brightness(0.5);
+
+    }
+
+    to {
+        filter: brightness(2);
+
+    }
+}
+
+@keyframes growing-animation {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes attack-animation {
+    0% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes enemy-attack-animation {
+    0% {
+        transform: translateX(0%) scaleX(-1);
+    }
+
+    50% {
+        transform: translateX(-50%) scaleX(-1);
+    }
+
+    100% {
+        transform: translateX(0%) scaleX(-1);
+    }
+}
+
+@keyframes attack-player-animation {
+    0% {
+        transform: translateX(0%);
+    }
+
+    50% {
+        transform: translateX(50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes button-growing-animation {
+    0% {
+        transform: scale(1, 1) translate(-50%, -50%);
+        transform-origin: top left;
+    }
+
+    50% {
+        transform: scale(1.2, 1.2) translate(-50%, -50%);
+        transform-origin: top left;
+    }
+
+    100% {
+        transform: scale(1, 1) translate(-50%, -50%);
+        transform-origin: top left;
+    }
+}
+
+@keyframes fill {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes walking-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(0deg)
+    }
+
+    75% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes target-circle-animation {
+    0% {
+        width: 0vw;
+        height: 0vw;
+        opacity: 0;
+    }
+
+    50% {
+        width: 2vw;
+        height: 2vw;
+        opacity: 1;
+    }
+
+    100% {
+        width: 4vw;
+        height: 4vw;
+        opacity: 0;
+    }
+}
+
+@keyframes wave-left-animation {
+    0% {
+        transform: translateX(0) translateY(0);
+        height: 100%;
+    }
+
+    50% {
+        transform: translateX(-1vw) translateY(0);
+        height: 110%;
+
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+        height: 100%;
+    }
+}
+
+@keyframes wave-bottom-animation {
+    0% {
+        transform: translateX(0) translateY(0);
+        height: 100%;
+    }
+
+    50% {
+        transform: translateX(0) translateY(-1vw);
+        height: 110%;
+
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+        height: 100%;
+    }
+}
+
+@keyframes wave-right-animation {
+    0% {
+        transform: scaleX(-1) translateX(0) translateY(0);
+        height: 100%;
+    }
+
+    50% {
+        transform: scaleX(-1) translateX(-1vw) translateY(0);
+        height: 110%;
+
+    }
+
+    100% {
+        transform: scaleX(-1) translateX(0) translateY(0);
+        height: 100%;
+
+    }
+}
+
+@keyframes logo-animation {
+    0% {
+        transform: rotate(2deg);
+        transform-origin: center;
+        filter: brightness(90%);
+    }
+
+    50% {
+        transform: rotate(-2deg);
+        transform-origin: center;
+        filter: brightness(200%);
+
+    }
+
+    100% {
+        transform: rotate(2deg);
+        transform-origin: center;
+        filter: brightness(90%);
+
+    }
+}
